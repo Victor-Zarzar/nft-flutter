@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class Avatar {
-  Avatar._();
+class AvatarProfile {
+  AvatarProfile._();
 
   static Image asset() {
     return Image.asset('lib/assets/profile.jpg');

@@ -20,7 +20,7 @@ class _HomePageState extends State<HomePage> {
             Row(
               children: [
                 CircleAvatar(
-                  child: Avatar.asset(),
+                  child: AvatarProfile.asset(),
                 )
               ],
             )

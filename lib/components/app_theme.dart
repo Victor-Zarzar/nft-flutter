@@ -18,6 +18,10 @@ class TabBarColor {
   TabBarColor._();
 
   static Color get primaryColor => const Color(0xFF455A64);
+
+  static Color get secondaryColor => const Color(0xFF78909C);
+
+  static Color get thirdColor => const Color(0xffF35383);
 }
 
 class TextFormColor {

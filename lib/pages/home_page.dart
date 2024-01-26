@@ -32,6 +32,8 @@ class _HomePageState extends State<HomePage>
               TabBar(
                 controller: _controller,
                 labelColor: TabBarColor.primaryColor,
+                unselectedLabelColor: TabBarColor.secondaryColor,
+                indicatorColor: TabBarColor.thirdColor,
                 tabs: const [
                   Tab(
                     text: 'New',

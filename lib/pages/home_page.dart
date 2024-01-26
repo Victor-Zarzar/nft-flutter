@@ -8,7 +8,15 @@ class HomePage extends StatefulWidget {
   State<HomePage> createState() => _HomePageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomePageState extends State<HomePage>
+    with SingleTickerProviderStateMixin {
+  TabController? _controller;
+  @override
+  void initState() {
+    super.initState();
+    _controller = TabController(length: 4, vsync: this);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,21 +26,59 @@ class _HomePageState extends State<HomePage> {
             children: [
               const SizedBox(height: 30),
               app_bar(),
-              const SizedBox(height: 30),
-              const Row(
-                children: [
-                  Text(
-                    'Live auctions',
-                    style: TextStyle(
-                      fontSize: 21,
-                      fontWeight: FontWeight.w600,
-                    ),
-                  )
+              const SizedBox(height: 24),
+              more(),
+              const SizedBox(height: 25),
+              TabBar(
+                controller: _controller,
+                labelColor: TabBarColor.primaryColor,
+                tabs: const [
+                  Tab(
+                    text: 'New',
+                  ),
+                  Tab(
+                    text: 'Art',
+                  ),
+                  Tab(
+                    text: 'Game',
+                  ),
+                  Tab(
+                    text: 'Music',
+                  ),
                 ],
-              )
+              ),
             ],
           ),
         ));
+  }
+
+  Padding more() {
+    return const Padding(
+      padding: EdgeInsets.symmetric(horizontal: 20),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text(
+            'Live auctions',
+            style: TextStyle(
+              fontSize: 21,
+              fontWeight: FontWeight.w600,
+            ),
+          ),
+          Row(
+            children: [
+              Text(
+                'more',
+                style: TextStyle(
+                  fontSize: 17,
+                ),
+              ),
+              Icon(Icons.arrow_right_sharp)
+            ],
+          )
+        ],
+      ),
+    );
   }
 
   Padding app_bar() {

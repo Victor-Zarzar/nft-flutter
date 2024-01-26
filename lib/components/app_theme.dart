@@ -14,6 +14,12 @@ class BackGround {
   static Color get primaryColor => const Color(0xFFECEFF1);
 }
 
+class TabBarColor {
+  TabBarColor._();
+
+  static Color get primaryColor => const Color(0xFF455A64);
+}
+
 class TextFormColor {
   TextFormColor._();
 

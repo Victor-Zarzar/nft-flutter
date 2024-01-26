@@ -13,39 +13,9 @@ class _HomePageState extends State<HomePage>
     with SingleTickerProviderStateMixin {
   TabController? _controller;
   List postItem = [
-    [
-      'ali',
-      'power',
-      '100',
-      '1',
-      '2',
-      '1K',
-      'h2.png',
-      '20',
-      '2',
-    ],
-    [
-      'alireza',
-      'reach',
-      '50',
-      '2',
-      '4',
-      '1K',
-      'h2.png',
-      '30',
-      '5',
-    ],
-    [
-      'abdoul',
-      'pore',
-      '20',
-      '1',
-      '2',
-      '1K',
-      'h1.png',
-      '20',
-      '2',
-    ],
+    ['ali', 'power', '10', '1', '2', '1K', 'h2.png', '20', '2'],
+    ['alireza', 'reach', '50', '3', '4', '1K', 'h2.png', '30', '5'],
+    ['abdoul', 'pore', '20', '2', '2', '1K', 'h1.png', '20', '2'],
   ];
   @override
   void initState() {
@@ -79,15 +49,15 @@ class _HomePageState extends State<HomePage>
     return List.generate(
         3,
         (index) => PostPage(
-              price: postItem[index][0],
-              creator: postItem[index][1],
-              image: postItem[index][2],
-              minutes: postItem[index][3],
-              hours: postItem[index][4],
-              day: postItem[index][5],
-              name: postItem[index][6],
-              creatorImage: postItem[index][7],
-              follower: postItem[index][8],
+              creator: postItem[index][0],
+              name: postItem[index][1],
+              price: postItem[index][2],
+              image: postItem[index][3],
+              day: postItem[index][4],
+              follower: postItem[index][5],
+              creatorImage: postItem[index][6],
+              minutes: postItem[index][7],
+              hours: postItem[index][8],
             ));
   }
 

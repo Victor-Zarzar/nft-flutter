@@ -37,6 +37,15 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ),
                         SizedBox(width: 13),
+                        CircleAvatar(
+                          radius: 21,
+                          backgroundColor: AppTheme.secondaryColor,
+                          child: Icon(
+                            Icons.notifications_none,
+                            size: 26,
+                            color: AppTheme.primaryColor,
+                          ),
+                        ),
                       ],
                     )
                   ],

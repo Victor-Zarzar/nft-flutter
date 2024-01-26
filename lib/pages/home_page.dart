@@ -28,30 +28,39 @@ class _HomePageState extends State<HomePage>
               app_bar(),
               const SizedBox(height: 24),
               more(),
-              const SizedBox(height: 25),
-              TabBar(
-                controller: _controller,
-                labelColor: TabBarColor.primaryColor,
-                unselectedLabelColor: TabBarColor.secondaryColor,
-                indicatorColor: TabBarColor.thirdColor,
-                tabs: const [
-                  Tab(
-                    text: 'New',
-                  ),
-                  Tab(
-                    text: 'Art',
-                  ),
-                  Tab(
-                    text: 'Game',
-                  ),
-                  Tab(
-                    text: 'Music',
-                  ),
-                ],
-              ),
+              const SizedBox(height: 10),
+              tabbar(),
+              const SizedBox(height: 24),
             ],
           ),
         ));
+  }
+
+  Widget tabbar() {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 20),
+      child: TabBar(
+        controller: _controller,
+        labelColor: TabBarColor.primaryColor,
+        unselectedLabelColor: TabBarColor.secondaryColor,
+        indicatorColor: TabBarColor.thirdColor,
+        labelStyle: const TextStyle(fontWeight: FontWeight.w600),
+        tabs: const [
+          Tab(
+            text: 'New',
+          ),
+          Tab(
+            text: 'Art',
+          ),
+          Tab(
+            text: 'Game',
+          ),
+          Tab(
+            text: 'Music',
+          ),
+        ],
+      ),
+    );
   }
 
   Padding more() {

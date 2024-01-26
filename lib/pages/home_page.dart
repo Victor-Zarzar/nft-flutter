@@ -17,7 +17,7 @@ class _HomePageState extends State<HomePage> {
           child: Column(
             children: [
               const SizedBox(height: 30),
-              const Padding(
+              Padding(
                 padding: EdgeInsets.symmetric(horizontal: 20),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -25,23 +25,23 @@ class _HomePageState extends State<HomePage> {
                     CircleAvatar(
                       backgroundImage: AssetImage('lib/assets/profile.jpg'),
                     ),
+                    Row(
+                      children: [
+                        CircleAvatar(
+                          radius: 21,
+                          backgroundColor: AppTheme.secondaryColor,
+                          child: Icon(
+                            Icons.search,
+                            size: 26,
+                            color: AppTheme.primaryColor,
+                          ),
+                        ),
+                        SizedBox(width: 13),
+                      ],
+                    )
                   ],
                 ),
               ),
-              Row(
-                children: [
-                  CircleAvatar(
-                    radius: 21,
-                    backgroundColor: AppTheme.secondaryColor,
-                    child: Icon(
-                      Icons.search,
-                      size: 26,
-                      color: AppTheme.primaryColor,
-                    ),
-                  ),
-                  const SizedBox(width: 13),
-                ],
-              )
             ],
           ),
         ));

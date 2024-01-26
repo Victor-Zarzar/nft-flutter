@@ -1,6 +1,5 @@
 import "package:flutter/material.dart";
 import 'package:nft_flutter/components/app_theme.dart';
-import 'package:nft_flutter/components/assets_app.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -13,20 +12,38 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppTheme.primaryColor,
-      body: SafeArea(
-        child: Column(
-          children: [
-            Row(
-              children: [
-                CircleAvatar(
-                  child: AvatarProfile.asset(),
-                )
-              ],
-            )
-          ],
-        ),
-      ),
-    );
+        backgroundColor: BackGround.primaryColor,
+        body: SafeArea(
+          child: Column(
+            children: [
+              const SizedBox(height: 30),
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 20),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    CircleAvatar(
+                      backgroundImage: AssetImage('lib/assets/profile.jpg'),
+                    ),
+                  ],
+                ),
+              ),
+              Row(
+                children: [
+                  CircleAvatar(
+                    radius: 21,
+                    backgroundColor: AppTheme.secondaryColor,
+                    child: Icon(
+                      Icons.search,
+                      size: 26,
+                      color: AppTheme.primaryColor,
+                    ),
+                  ),
+                  const SizedBox(width: 13),
+                ],
+              )
+            ],
+          ),
+        ));
   }
 }

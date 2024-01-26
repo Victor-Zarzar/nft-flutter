@@ -5,13 +5,13 @@ class AppTheme {
 
   static Color get primaryColor => const Color(0xfff4f6f8);
 
-  static Color get secondaryColor => const Color(0xFF40414f);
+  static Color get secondaryColor => const Color(0xFF546E7A);
 }
 
 class BackGround {
   BackGround._();
 
-  static Color get primaryColor => const Color(0xFF000000);
+  static Color get primaryColor => const Color(0xFFECEFF1);
 }
 
 class TextFormColor {

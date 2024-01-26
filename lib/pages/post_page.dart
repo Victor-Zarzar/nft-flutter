@@ -1,3 +1,5 @@
+import "dart:ui";
+
 import "package:flutter/material.dart";
 import "package:nft_flutter/components/app_theme.dart";
 
@@ -33,7 +35,7 @@ class _PostPageState extends State<PostPage> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20),
+      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
       child: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
@@ -50,6 +52,22 @@ class _PostPageState extends State<PostPage> {
         ),
         width: double.infinity,
         height: 350,
+        child: Stack(
+          children: [
+            ClipRRect(
+              child: BackdropFilter(
+                filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
+                child: Container(
+                  width: 36,
+                  height: 36,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(5),
+                  ),
+                ),
+              ),
+            )
+          ],
+        ),
       ),
     );
   }

@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import "package:nft_flutter/components/app_theme.dart";
 
 class PostPage extends StatefulWidget {
   final String price;
@@ -35,10 +36,20 @@ class _PostPageState extends State<PostPage> {
       padding: const EdgeInsets.symmetric(horizontal: 20),
       child: Container(
         decoration: BoxDecoration(
-            image: DecorationImage(
-                image: AssetImage('lib/assets/${widget.image}.png'),
-                fit: BoxFit.cover),
-            borderRadius: BorderRadius.circular(20)),
+          image: DecorationImage(
+              image: AssetImage('lib/assets/${widget.image}.png'),
+              fit: BoxFit.cover),
+          borderRadius: BorderRadius.circular(20),
+          boxShadow: [
+            BoxShadow(
+              offset: const Offset(0, 5),
+              color: PostColor.primaryColor,
+              blurRadius: 16,
+            ),
+          ],
+        ),
+        width: double.infinity,
+        height: 350,
       ),
     );
   }

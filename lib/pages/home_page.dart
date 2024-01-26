@@ -58,17 +58,19 @@ class _HomePageState extends State<HomePage>
     return Scaffold(
         backgroundColor: BackGround.primaryColor,
         body: SafeArea(
-          child: Column(
-            children: [
-              const SizedBox(height: 30),
-              app_bar(),
-              const SizedBox(height: 24),
-              more(),
-              const SizedBox(height: 10),
-              tabbar(),
-              const SizedBox(height: 24),
-              ...postGenerate(),
-            ],
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                const SizedBox(height: 30),
+                app_bar(),
+                const SizedBox(height: 24),
+                more(),
+                const SizedBox(height: 10),
+                tabbar(),
+                const SizedBox(height: 24),
+                ...postGenerate(),
+              ],
+            ),
           ),
         ));
   }

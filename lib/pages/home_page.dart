@@ -67,22 +67,26 @@ class _HomePageState extends State<HomePage>
               const SizedBox(height: 10),
               tabbar(),
               const SizedBox(height: 24),
-              ...List.generate(
-                  2,
-                  (index) => PostPage(
-                        price: postItem[index][0],
-                        creator: postItem[index][1],
-                        image: postItem[index][2],
-                        minutes: postItem[index][3],
-                        hours: postItem[index][4],
-                        day: postItem[index][5],
-                        name: postItem[index][6],
-                        creatorImage: postItem[index][7],
-                        follower: postItem[index][8],
-                      ))
+              ...postGenerate(),
             ],
           ),
         ));
+  }
+
+  List<Widget> postGenerate() {
+    return List.generate(
+        3,
+        (index) => PostPage(
+              price: postItem[index][0],
+              creator: postItem[index][1],
+              image: postItem[index][2],
+              minutes: postItem[index][3],
+              hours: postItem[index][4],
+              day: postItem[index][5],
+              name: postItem[index][6],
+              creatorImage: postItem[index][7],
+              follower: postItem[index][8],
+            ));
   }
 
   Widget tabbar() {

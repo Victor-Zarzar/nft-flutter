@@ -17,42 +17,58 @@ class _HomePageState extends State<HomePage> {
           child: Column(
             children: [
               const SizedBox(height: 30),
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    CircleAvatar(
-                      backgroundImage: AssetImage('lib/assets/profile.jpg'),
+              app_bar(),
+              const SizedBox(height: 30),
+              const Row(
+                children: [
+                  Text(
+                    'Live auctions',
+                    style: TextStyle(
+                      fontSize: 21,
+                      fontWeight: FontWeight.w600,
                     ),
-                    Row(
-                      children: [
-                        CircleAvatar(
-                          radius: 21,
-                          backgroundColor: AppTheme.secondaryColor,
-                          child: Icon(
-                            Icons.search,
-                            size: 26,
-                            color: AppTheme.primaryColor,
-                          ),
-                        ),
-                        SizedBox(width: 13),
-                        CircleAvatar(
-                          radius: 21,
-                          backgroundColor: AppTheme.secondaryColor,
-                          child: Icon(
-                            Icons.notifications_none,
-                            size: 26,
-                            color: AppTheme.primaryColor,
-                          ),
-                        ),
-                      ],
-                    )
-                  ],
-                ),
-              ),
+                  )
+                ],
+              )
             ],
           ),
         ));
+  }
+
+  Padding app_bar() {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 20),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          const CircleAvatar(
+            backgroundImage: AssetImage('lib/assets/profile.jpg'),
+          ),
+          Row(
+            children: [
+              CircleAvatar(
+                radius: 21,
+                backgroundColor: AppTheme.secondaryColor,
+                child: Icon(
+                  Icons.search,
+                  size: 26,
+                  color: AppTheme.primaryColor,
+                ),
+              ),
+              const SizedBox(width: 13),
+              CircleAvatar(
+                radius: 21,
+                backgroundColor: AppTheme.secondaryColor,
+                child: Icon(
+                  Icons.notifications_none,
+                  size: 26,
+                  color: AppTheme.primaryColor,
+                ),
+              ),
+            ],
+          )
+        ],
+      ),
+    );
   }
 }

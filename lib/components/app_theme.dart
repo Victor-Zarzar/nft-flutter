@@ -32,10 +32,10 @@ class PostColor {
   static Color get secondaryColor => const Color(0xFF000000);
 }
 
-class Button {
-  Button._();
+class CardColor {
+  CardColor._();
 
-  static Color get primaryColor => const Color(0xFFD50000);
+  static Color get primaryColor => const Color(0xFFBDBDBD);
 
-  static Color get secondaryColor => const Color(0xFFF44336);
+  static Color get secondaryColor => const Color(0xFFFFC107);
 }

@@ -84,7 +84,98 @@ class _PostPageState extends State<PostPage> {
                       ),
                     ),
                   ),
+                  const SizedBox(width: 4),
+                  const Text(
+                    ':',
+                    style: TextStyle(fontSize: 20, color: Colors.white),
+                  ),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(5),
+                    child: BackdropFilter(
+                      filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
+                      child: Container(
+                        alignment: Alignment.center,
+                        width: 36,
+                        height: 36,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(5),
+                          gradient: LinearGradient(
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
+                            colors: [
+                              Colors.grey.shade200.withOpacity(0.6),
+                              Colors.grey.shade200.withOpacity(0.3),
+                            ],
+                          ),
+                        ),
+                        child: Text(
+                          '${widget.hours} H',
+                          style: const TextStyle(fontWeight: FontWeight.w600),
+                        ),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 4),
+                  const Text(
+                    ':',
+                    style: TextStyle(fontSize: 20, color: Colors.white),
+                  ),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(5),
+                    child: BackdropFilter(
+                      filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
+                      child: Container(
+                        alignment: Alignment.center,
+                        width: 36,
+                        height: 36,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(5),
+                          gradient: LinearGradient(
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
+                            colors: [
+                              CardColor.primaryColor.withOpacity(0.6),
+                              CardColor.primaryColor.withOpacity(0.3),
+                            ],
+                          ),
+                        ),
+                        child: Text(
+                          '${widget.minutes} M',
+                          style: const TextStyle(fontWeight: FontWeight.w600),
+                        ),
+                      ),
+                    ),
+                  ),
                 ],
+              ),
+            ),
+            Positioned(
+              top: 270,
+              bottom: 0,
+              left: 0,
+              right: 0,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 15),
+                child: Row(
+                  children: [
+                    Expanded(flex: 3, child: Container(height: 50)),
+                    Expanded(
+                      flex: 2,
+                      child: Container(
+                          height: 50,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(5),
+                            gradient: LinearGradient(
+                                begin: Alignment.topLeft,
+                                end: Alignment.bottomRight,
+                                colors: [
+                                  CardColor.primaryColor.withOpacity(0.6),
+                                  CardColor.primaryColor.withOpacity(0.3),
+                                ]),
+                          )),
+                    ),
+                  ],
+                ),
               ),
             ),
           ],

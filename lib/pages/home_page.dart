@@ -31,20 +31,18 @@ class _HomePageState extends State<HomePage>
         child: Stack(
           alignment: AlignmentDirectional.bottomCenter,
           children: [
-            Container(
-              child: SingleChildScrollView(
-                child: Column(
-                  children: [
-                    const SizedBox(height: 30),
-                    app_bar(),
-                    const SizedBox(height: 24),
-                    more(),
-                    const SizedBox(height: 10),
-                    tabbar(),
-                    const SizedBox(height: 24),
-                    ...postGenerate(),
-                  ],
-                ),
+            SingleChildScrollView(
+              child: Column(
+                children: [
+                  const SizedBox(height: 30),
+                  app_bar(),
+                  const SizedBox(height: 24),
+                  more(),
+                  const SizedBox(height: 10),
+                  tabbar(),
+                  const SizedBox(height: 24),
+                  ...postGenerate(),
+                ],
               ),
             ),
             Padding(

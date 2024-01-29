@@ -170,21 +170,29 @@ class _PostPageState extends State<PostPage> {
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(5),
                               gradient: LinearGradient(
-                                begin: Alignment.topLeft,
-                                end: Alignment.bottomRight,
+                                begin: Alignment.centerLeft,
+                                end: Alignment.centerRight,
                                 colors: [
                                   CardColor.primaryColor.withOpacity(0.6),
                                   CardColor.primaryColor.withOpacity(0.3),
                                 ],
                               ),
                             ),
-                            child: Row(
-                              children: [
-                                Image.asset('lib/assets/et.png'),
-                                Text(
-                                  '${widget.price} ETH',
-                                ),
-                              ],
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(vertical: 8),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
+                                children: [
+                                  Image.asset('lib/assets/et.png'),
+                                  Text(
+                                    '${widget.price} ETH',
+                                    style: const TextStyle(
+                                      fontSize: 20,
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
                         ),

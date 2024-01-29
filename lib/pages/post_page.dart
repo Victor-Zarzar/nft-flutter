@@ -103,8 +103,8 @@ class _PostPageState extends State<PostPage> {
                             begin: Alignment.topLeft,
                             end: Alignment.bottomRight,
                             colors: [
-                              Colors.grey.shade200.withOpacity(0.6),
-                              Colors.grey.shade200.withOpacity(0.3),
+                              CardColor.primaryColor.withOpacity(0.6),
+                              CardColor.primaryColor.withOpacity(0.3),
                             ],
                           ),
                         ),

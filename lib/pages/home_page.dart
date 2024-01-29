@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import "package:flutter/material.dart";
 import 'package:nft_flutter/components/app_theme.dart';
 import 'package:nft_flutter/pages/post_page.dart';
@@ -47,8 +49,28 @@ class _HomePageState extends State<HomePage>
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 15),
-              child: Container(),
-            )
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(20),
+                child: BackdropFilter(
+                  filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
+                  child: Container(
+                    width: double.infinity,
+                    height: 70,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      gradient: LinearGradient(
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight,
+                        colors: [
+                          CardColor.secondaryColor.withOpacity(0.6),
+                          CardColor.secondaryColor.withOpacity(0.3),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
       ),
@@ -121,7 +143,7 @@ class _HomePageState extends State<HomePage>
               ),
               Icon(Icons.arrow_right_sharp)
             ],
-          )
+          ),
         ],
       ),
     );

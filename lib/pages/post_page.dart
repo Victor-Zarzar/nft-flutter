@@ -161,18 +161,34 @@ class _PostPageState extends State<PostPage> {
                     Expanded(flex: 3, child: Container(height: 50)),
                     Expanded(
                       flex: 2,
-                      child: Container(
-                          height: 50,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(5),
-                            gradient: LinearGradient(
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(5),
+                        child: BackdropFilter(
+                          filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
+                          child: Container(
+                            height: 50,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(5),
+                              gradient: LinearGradient(
                                 begin: Alignment.topLeft,
                                 end: Alignment.bottomRight,
                                 colors: [
                                   CardColor.primaryColor.withOpacity(0.6),
                                   CardColor.primaryColor.withOpacity(0.3),
-                                ]),
-                          )),
+                                ],
+                              ),
+                            ),
+                            child: Row(
+                              children: [
+                                Image.asset('lib/assets/et.png'),
+                                Text(
+                                  '${widget.price} ETH',
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
                     ),
                   ],
                 ),

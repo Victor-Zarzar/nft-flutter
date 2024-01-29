@@ -1,5 +1,4 @@
 import "dart:ui";
-
 import "package:flutter/material.dart";
 import "package:nft_flutter/components/app_theme.dart";
 
@@ -39,8 +38,9 @@ class _PostPageState extends State<PostPage> {
       child: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage('lib/assets/${widget.image}.png'),
-              fit: BoxFit.cover),
+            image: AssetImage('lib/assets/${widget.image}.png'),
+            fit: BoxFit.cover,
+          ),
           borderRadius: BorderRadius.circular(20),
           boxShadow: [
             BoxShadow(
@@ -54,18 +54,39 @@ class _PostPageState extends State<PostPage> {
         height: 350,
         child: Stack(
           children: [
-            ClipRRect(
-              child: BackdropFilter(
-                filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
-                child: Container(
-                  width: 36,
-                  height: 36,
-                  decoration: BoxDecoration(
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 15),
+              child: Row(
+                children: [
+                  ClipRRect(
                     borderRadius: BorderRadius.circular(5),
+                    child: BackdropFilter(
+                      filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
+                      child: Container(
+                        alignment: Alignment.center,
+                        width: 36,
+                        height: 36,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(5),
+                          gradient: LinearGradient(
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
+                            colors: [
+                              Colors.grey.shade200.withOpacity(0.6),
+                              Colors.grey.shade200.withOpacity(0.3),
+                            ],
+                          ),
+                        ),
+                        child: Text(
+                          '${widget.day} D',
+                          style: const TextStyle(fontWeight: FontWeight.w600),
+                        ),
+                      ),
+                    ),
                   ),
-                ),
+                ],
               ),
-            )
+            ),
           ],
         ),
       ),

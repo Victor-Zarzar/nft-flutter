@@ -28,6 +28,25 @@ class DetailPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: BackGround.primaryColor,
+      body: SafeArea(
+          child: CustomScrollView(
+        slivers: [
+          SliverAppBar(
+            backgroundColor: BackGround.primaryColor,
+            automaticallyImplyLeading: false,
+            expandedHeight: 500,
+            flexibleSpace: FlexibleSpaceBar(
+              background: Container(
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage('lib/assets/$image.png'),
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ],
+      )),
     );
   }
 }

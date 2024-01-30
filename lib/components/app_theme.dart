@@ -40,6 +40,8 @@ class CardColor {
   static Color get secondaryColor => const Color(0xFF9E9E9E);
 
   static Color get thirdColor => const Color(0xFFFFFFFF);
+
+  static Color get fourthColor => const Color(0xFF000000);
 }
 
 class FontTextColor {

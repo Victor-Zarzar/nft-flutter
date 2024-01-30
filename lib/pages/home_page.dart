@@ -15,9 +15,9 @@ class _HomePageState extends State<HomePage>
     with SingleTickerProviderStateMixin {
   TabController? _controller;
   List postItem = [
-    ['ali', 'power', '10', '1', '2', '1K', 'h2.png', '20', '2'],
-    ['alireza', 'reach', '50', '3', '4', '1K', 'h2.png', '30', '5'],
-    ['abdoul', 'pore', '20', '2', '2', '1K', 'h1.png', '20', '2'],
+    ['Darth Vader', 'power', '10', '1', '2', '1K', 'h2.png', '20', '2'],
+    ['Monkey 1', 'reach', '50', '3', '4', '1K', 'h3.png', '30', '5'],
+    ['Monkey 2', 'pore', '20', '2', '2', '1K', 'p3.png', '20', '2'],
   ];
   @override
   void initState() {
@@ -39,7 +39,7 @@ class _HomePageState extends State<HomePage>
                 child: Column(
                   children: [
                     const SizedBox(height: 30),
-                    app_bar(),
+                    appbar(),
                     const SizedBox(height: 24),
                     more(),
                     const SizedBox(height: 10),
@@ -177,7 +177,7 @@ class _HomePageState extends State<HomePage>
     );
   }
 
-  Padding app_bar() {
+  Padding appbar() {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20),
       child: Row(

@@ -33,32 +33,84 @@ class DetailPage extends StatelessWidget {
         child: CustomScrollView(
           slivers: [
             appbar(context),
+            follow(),
             SliverToBoxAdapter(
-              child: ListTile(
-                trailing: Container(
-                  width: 80,
-                  height: 80,
-                  decoration: BoxDecoration(
-                      boxShadow: [
-                        BoxShadow(
-                          offset: const Offset(4, 2),
-                          color: CardColor.primaryColor,
-                          blurRadius: 20,
-                        ),
-                      ],
-                      color: CardColor.thirdColor,
-                      borderRadius: BorderRadius.circular(30)),
-                  child: Text(
-                    'Follow +',
-                    style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      color: TextButtonColor.primaryColor,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Divider(),
+                    Text(
+                      name,
+                      style: const TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 27,
+                      ),
                     ),
-                  ),
+                    const SizedBox(height: 10,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 20),
+                      child: Text('NFTs, or Non-Fungible Tokens, have revolutionized the digital world by introducing a unique way of owning and trading digital assets using blockchain technology. Unlike cryptocurrencies like Bitcoin or Ethereum, which are fungible and can be exchanged on a one-to-one basis, each NFT is distinct, carrying its own specific value and characteristics. NFTs have gained immense popularity in the art world, enabling artists to tokenize their work, thereby ensuring authenticity and ownership. These digital tokens have also found applications in various other sectors such as gaming, real estate, and collectibles. As the interest in NFTs continues to grow, they are becoming an integral part of the broader crypto economy, challenging traditional notions of ownership and value in the digital age.',
+                       style: TextStyle(
+                        fontSize: 17,
+                        color: FontTextColor.secondaryColor,
+                       ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
-            )
+            ),
           ],
+        ),
+      ),
+    );
+  }
+
+  SliverToBoxAdapter follow() {
+    return SliverToBoxAdapter(
+      child: ListTile(
+        trailing: Container(
+          alignment: Alignment.center,
+          width: 80,
+          height: 80,
+          decoration: BoxDecoration(
+              boxShadow: [
+                BoxShadow(
+                  offset: const Offset(4, 2),
+                  color: CardColor.primaryColor,
+                  blurRadius: 20,
+                ),
+              ],
+              color: CardColor.thirdColor,
+              borderRadius: BorderRadius.circular(30)),
+          child: Text(
+            'Follow +',
+            style: TextStyle(
+              fontWeight: FontWeight.w600,
+              color: TextButtonColor.primaryColor,
+            ),
+          ),
+        ),
+        subtitle: Text(
+          '$follower Follower ',
+          style: const TextStyle(
+            fontWeight: FontWeight.w600,
+          ),
+        ),
+        title: Text(
+          creator,
+          style: const TextStyle(
+            fontWeight: FontWeight.w600,
+            fontSize: 19,
+          ),
+        ),
+        leading: CircleAvatar(
+          backgroundImage: AssetImage(
+            'lib/assets/$creatorImage',
+          ),
         ),
       ),
     );

@@ -15,7 +15,7 @@ class PostPage extends StatefulWidget {
   final String follower;
 
   const PostPage({
-    super.key,
+    Key? key,
     required this.price,
     required this.creator,
     required this.image,
@@ -25,7 +25,7 @@ class PostPage extends StatefulWidget {
     required this.name,
     required this.creatorImage,
     required this.follower,
-  });
+  }) : super(key: key);
 
   @override
   State<PostPage> createState() => _PostPageState();
@@ -103,9 +103,10 @@ class _PostPageState extends State<PostPage> {
                       ),
                     ),
                     const SizedBox(width: 4),
-                    const Text(
+                    Text(
                       ':',
-                      style: TextStyle(fontSize: 20, color: Colors.white),
+                      style: TextStyle(fontSize: 20, color: FontTextColor.primaryColor,
+                      ),
                     ),
                     ClipRRect(
                       borderRadius: BorderRadius.circular(5),
@@ -134,9 +135,10 @@ class _PostPageState extends State<PostPage> {
                       ),
                     ),
                     const SizedBox(width: 4),
-                    const Text(
+                    Text(
                       ':',
-                      style: TextStyle(fontSize: 20, color: Colors.white),
+                      style: TextStyle(fontSize: 20, color: FontTextColor.primaryColor,
+                      ),
                     ),
                     ClipRRect(
                       borderRadius: BorderRadius.circular(5),

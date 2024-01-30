@@ -47,5 +47,11 @@ class CardColor {
 class FontTextColor {
   FontTextColor._();
 
-  static Color get primaryColor => const Color (0xFFFFFFFF);
+  static Color get primaryColor => const Color(0xFFFFFFFF);
+}
+
+class TextButtonColor {
+  TextButtonColor._();
+
+  static Color get primaryColor => const Color.fromARGB(255, 182, 6, 59);
 }

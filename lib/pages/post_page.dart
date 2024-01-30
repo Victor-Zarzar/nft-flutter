@@ -105,7 +105,9 @@ class _PostPageState extends State<PostPage> {
                     const SizedBox(width: 4),
                     Text(
                       ':',
-                      style: TextStyle(fontSize: 20, color: FontTextColor.primaryColor,
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: FontTextColor.primaryColor,
                       ),
                     ),
                     ClipRRect(
@@ -137,7 +139,9 @@ class _PostPageState extends State<PostPage> {
                     const SizedBox(width: 4),
                     Text(
                       ':',
-                      style: TextStyle(fontSize: 20, color: FontTextColor.primaryColor,
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: FontTextColor.primaryColor,
                       ),
                     ),
                     ClipRRect(

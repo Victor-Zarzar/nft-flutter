@@ -34,17 +34,20 @@ class _HomePageState extends State<HomePage>
           alignment: AlignmentDirectional.bottomCenter,
           children: [
             SingleChildScrollView(
-              child: Column(
-                children: [
-                  const SizedBox(height: 30),
-                  app_bar(),
-                  const SizedBox(height: 24),
-                  more(),
-                  const SizedBox(height: 10),
-                  tabbar(),
-                  const SizedBox(height: 24),
-                  ...postGenerate(),
-                ],
+              child: Padding(
+                padding: const EdgeInsets.only(bottom: 100),
+                child: Column(
+                  children: [
+                    const SizedBox(height: 30),
+                    app_bar(),
+                    const SizedBox(height: 24),
+                    more(),
+                    const SizedBox(height: 10),
+                    tabbar(),
+                    const SizedBox(height: 24),
+                    ...postGenerate(),
+                  ],
+                ),
               ),
             ),
             Padding(
@@ -60,12 +63,37 @@ class _HomePageState extends State<HomePage>
                       borderRadius: BorderRadius.circular(20),
                       gradient: LinearGradient(
                         begin: Alignment.topLeft,
-                        end: Alignment.bottomRight,
+                        end: Alignment.topRight,
                         colors: [
-                          CardColor.secondaryColor.withOpacity(0.6),
+                          CardColor.secondaryColor.withOpacity(0.5),
                           CardColor.secondaryColor.withOpacity(0.3),
                         ],
                       ),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        Icon(
+                          Icons.home,
+                          size: 26,
+                          color: CardColor.thirdColor,
+                        ),
+                        Icon(
+                          Icons.favorite,
+                          size: 26,
+                          color: CardColor.thirdColor,
+                        ),
+                        Icon(
+                          Icons.search,
+                          size: 26,
+                          color: CardColor.thirdColor,
+                        ),
+                        Icon(
+                          Icons.add_box_outlined,
+                          size: 26,
+                          color: CardColor.thirdColor,
+                        ),
+                      ],
                     ),
                   ),
                 ),

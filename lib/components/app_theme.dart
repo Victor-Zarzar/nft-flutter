@@ -38,4 +38,6 @@ class CardColor {
   static Color get primaryColor => const Color(0xFFBDBDBD);
 
   static Color get secondaryColor => const Color(0xFF9E9E9E);
+
+  static Color get thirdColor => const Color(0xFFFFFFFF);
 }

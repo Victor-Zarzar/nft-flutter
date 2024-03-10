@@ -1,9 +1,35 @@
-# NFT Market Place App iOS/Android
+<h1 align="center" id="header">
+ NFT Market Place App Flutter
+</h1>
 
-## Stack:
+🤖 Stack:
 
 - Dart
 - Flutter
+
+<br />
+
+⚙️ How to install:
+
+Project Clone
+
+     git clone https://github.com/Victor-Zarzar/nft-flutter
+
+Enter in directory:
+
+     cd nft-flutter
+
+Open in your favorite editor(e.g. VSCode):
+
+    code .
+
+For install dependencies:
+
+    flutter pub get
+
+Run the app:
+   
+    flutter run
 
 ### Version iOS:
 
